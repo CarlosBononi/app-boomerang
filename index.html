@@ -43,9 +43,7 @@
         }
 
         .logo {
-            width: 300px; /* Define a largura do logotipo */
-            height: auto; /* Mantém as proporções automáticas */
-            object-fit: contain; /* Garante que a imagem não seja distorcida */
+            width: 300px; /* Tamanho do logotipo */
             margin-bottom: 40px;
         }
 
@@ -85,9 +83,13 @@
         .app-icon {
             margin-right: 10px;
         }
+
+        /* Estilos para as imagens dos logos das lojas */
+        .store-logo {
+            width: 200px; /* Define o tamanho das imagens */
+            margin: 10px auto; /* Centraliza horizontalmente e adiciona margem */
+        }
     </style>
-    <!-- Ícones do Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -96,15 +98,11 @@
         <div class="button-container">
             <!-- Botão Google Play -->
             <a href="https://play.google.com/store/apps/details?id=br.com.boomerang.passenger.drivermachine" target="_blank">
-                <button class="app-button">
-                    <i class="fas fa-arrow-right app-icon"></i> Disponível no Google Play
-                </button>
+                <img src="PlayStore.png" alt="Disponível no Google Play" class="store-logo">
             </a>
             <!-- Botão App Store -->
             <a href="https://apps.apple.com/br/app/boomerang-passageiro/id6739507898" target="_blank">
-                <button class="app-button">
-                    <i class="fab fa-apple app-icon"></i> Disponível na App Store
-                </button>
+                <img src="AppleStore.png" alt="Disponível na App Store" class="store-logo">
             </a>
         </div>
     </div>
