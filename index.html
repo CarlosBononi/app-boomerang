@@ -12,11 +12,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baixe o Boomerang</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- Favicon padrão -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"> <!-- Ícone para iOS -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"> <!-- Favicon 32x32 -->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"> <!-- Favicon 16x16 -->
+    <link rel="manifest" href="site.webmanifest"> <!-- Manifesto para PWAs -->
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#FFB500"> <!-- Ícone SVG para Safari -->
+    <meta name="msapplication-TileColor" content="#C69FCD"> <!-- Cor do tile no Windows -->
+    <meta name="theme-color" content="#C69FCD"> <!-- Cor do tema para navegadores modernos -->
+
     <style>
-        /* Estilos existentes (não alterados) */
+        /* Estilos globais */
         body {
             font-family: Arial, sans-serif;
-            background-color: #C69FCD;
+            background-color: #C69FCD; /* Cor de fundo da marca */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -25,8 +36,43 @@
             margin: 0;
             padding: 20px;
         }
-        /* Restante dos estilos... */
+        
+        .container {
+            max-width: 600px;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 300px;
+            margin-bottom: 40px;
+        }
+        
+        .button-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .app-button {
+            background-color: #FFB500; /* Amarelo principal */
+            color: #3C1253; /* Roxo escuro */
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .app-button:hover {
+            background-color: #EAA700; /* Sombra do amarelo */
+        }
+
+        .app-icon {
+            margin-right: 10px;
+        }
     </style>
+    <!-- Ícones do Font Awesome (não precisa alterar) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -34,26 +80,16 @@
         <img src="logo.png" alt="Logo Boomerang" class="logo">
         <h2>Baixe nosso aplicativo agora!</h2>
         <div class="button-container">
-            <!-- Botão do Google Play com rastreamento -->
-            <a 
-                href="https://play.google.com/store/apps/details?id=br.com.boomerang.passenger.drivermachine" 
-                target="_blank" 
-                onclick="gtag('event', 'click', { 'event_category': 'download', 'event_label': 'google_play' });"
-            >
+            <!-- Botão do Google Play -->
+            <a href="https://play.google.com/store/apps/details?id=br.com.boomerang.passenger.drivermachine" target="_blank">
                 <button class="app-button">
-                    <i class="fab fa-google-play app-icon"></i>
-                    Disponível no Google Play
+                    <i class="fas fa-arrow-right app-icon"></i> Disponível no Google Play
                 </button>
             </a>
-            <!-- Botão da App Store com rastreamento -->
-            <a 
-                href="https://apps.apple.com/br/app/boomerang-passageiro/id6739507898" 
-                target="_blank" 
-                onclick="gtag('event', 'click', { 'event_category': 'download', 'event_label': 'app_store' });"
-            >
+            <!-- Botão da App Store -->
+            <a href="https://apps.apple.com/br/app/boomerang-passageiro/id6739507898" target="_blank">
                 <button class="app-button">
-                    <i class="fab fa-apple app-icon"></i>
-                    Disponível na App Store
+                    <i class="fab fa-apple app-icon"></i> Disponível na App Store
                 </button>
             </a>
         </div>
