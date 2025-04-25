@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baixe o Boomerang</title>
 
-    <!-- Favicons (verifique se os arquivos estão na mesma pasta do HTML) -->
+    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -55,19 +55,21 @@
 
         .button-container {
             display: flex;
-            gap: 20px;
+            flex-direction: column; /* Alinha verticalmente */
+            gap: 20px; /* Espaçamento entre os botões */
             margin-top: 40px;
         }
 
         .app-button {
             background-color: #FFB500; /* Amarelo principal */
             color: #3C1253; /* Texto roxo escuro */
-            padding: 15px 30px;
+            padding: 15px 30px; /* Espessura dos botões */
             border: none;
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            width: 100%; /* Ocupa toda a largura disponível */
         }
 
         .app-button:hover {
@@ -78,8 +80,6 @@
             margin-right: 10px;
         }
     </style>
-    <!-- Ícones do Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
