@@ -44,6 +44,8 @@
 
         .logo {
             width: 300px; /* Tamanho do logotipo */
+            height: auto; /* Mantém proporções */
+            object-fit: contain;
             margin-bottom: 40px;
         }
 
@@ -69,11 +71,10 @@
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            width: calc(50% - 10px); /* Cada botão ocupa metade da largura, menos o espaçamento entre eles */
-            height: 70px; /* Altura fixa para garantir que ambos tenham o mesmo tamanho vertical */
+            width: 100%; /* Ocupa toda a largura do container */
             display: flex;
-            align-items: center; /* Centraliza o conteúdo verticalmente */
-            justify-content: center; /* Centraliza o conteúdo horizontalmente */
+            align-items: center; /* Centraliza conteúdo verticalmente */
+            justify-content: center; /* Centraliza conteúdo horizontalmente */
         }
 
         .app-button:hover {
@@ -83,13 +84,9 @@
         .app-icon {
             margin-right: 10px;
         }
-
-        /* Estilos para as imagens dos logos das lojas */
-        .store-logo {
-            width: 200px; /* Define o tamanho das imagens */
-            margin: 10px auto; /* Centraliza horizontalmente e adiciona margem */
-        }
     </style>
+    <!-- Ícones do Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -98,11 +95,15 @@
         <div class="button-container">
             <!-- Botão Google Play -->
             <a href="https://play.google.com/store/apps/details?id=br.com.boomerang.passenger.drivermachine" target="_blank">
-                <img src="PlayStore.png" alt="Disponível no Google Play" class="store-logo">
+                <button class="app-button">
+                    <i class="fab fa-google-play app-icon"></i> Disponível no Google Play
+                </button>
             </a>
             <!-- Botão App Store -->
             <a href="https://apps.apple.com/br/app/boomerang-passageiro/id6739507898" target="_blank">
-                <img src="AppleStore.png" alt="Disponível na App Store" class="store-logo">
+                <button class="app-button">
+                    <i class="fab fa-apple app-icon"></i> Disponível na App Store
+                </button>
             </a>
         </div>
     </div>
