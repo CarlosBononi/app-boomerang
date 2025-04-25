@@ -43,9 +43,9 @@
         }
 
         .logo {
-            width: 300px; /* Tamanho do logotipo */
-            height: auto; /* Mantém proporções */
-            object-fit: contain;
+            width: 300px; /* Define a largura do logotipo */
+            height: auto; /* Mantém as proporções automáticas */
+            object-fit: contain; /* Garante que a imagem não seja distorcida */
             margin-bottom: 40px;
         }
 
@@ -71,10 +71,11 @@
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            width: 100%; /* Ocupa toda a largura do container */
+            width: calc(50% - 10px); /* Cada botão ocupa metade da largura, menos o espaçamento entre eles */
+            height: 70px; /* Altura fixa para garantir que ambos tenham o mesmo tamanho vertical */
             display: flex;
-            align-items: center; /* Centraliza conteúdo verticalmente */
-            justify-content: center; /* Centraliza conteúdo horizontalmente */
+            align-items: center; /* Centraliza o conteúdo verticalmente */
+            justify-content: center; /* Centraliza o conteúdo horizontalmente */
         }
 
         .app-button:hover {
@@ -96,13 +97,13 @@
             <!-- Botão Google Play -->
             <a href="https://play.google.com/store/apps/details?id=br.com.boomerang.passenger.drivermachine" target="_blank">
                 <button class="app-button">
-                    <i class="fab fa-google-play app-icon"></i> Disponível no Google Play
+                    <i class="fas fa-arrow-right app-icon"></i> Disponível no Google Play
                 </button>
             </a>
             <!-- Botão App Store -->
             <a href="https://apps.apple.com/br/app/boomerang-passageiro/id6739507898" target="_blank">
                 <button class="app-button">
-                    <i class="fab fa-apple app-icon"></i> Disponível na Apple Store
+                    <i class="fab fa-apple app-icon"></i> Disponível na App Store
                 </button>
             </a>
         </div>
